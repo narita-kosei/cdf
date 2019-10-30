@@ -20,9 +20,10 @@ cdf() {
                 FLG_A='TRUE'
                 ;;
             "h" )
-                echo 'Usage: cdf [-a] [path]'
+                echo 'Usage: cdf [-a] [-h] [path]'
                 echo ''
-                echo '-a:   Show all directories including hidden directory.'
+                echo '-a:   Display all directories including hidden directory.'
+                echo '-h:   Show help'
                 echo 'path: Start with given path. If omitted, current path is used.'
                 return
                 ;;
