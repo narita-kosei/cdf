@@ -2,12 +2,12 @@
 # cdf - Change Directory like Finder
 # Use arrow key to change directory
 # 
-# Left  (ctrl-h)        : Change to parent directory
-# Right (ctrl-l, space) : Change to directory at cursor position
-# Up    (ctrl-k)        : Move cursor to up
-# Down  (ctrl-j, tab)   : Move cursor to down
+# Left  (ctrl-h)        : Move to parent directory
+# Right (ctrl-l, space) : Move to directory at cursor position
+# Up    (ctrl-k)        : Move cursor up
+# Down  (ctrl-j, tab)   : Move cursor down
 #
-# Enter                 : Quit after change to directory at cursor position
+# Enter                 : Quit after move to directory at cursor position
 # Esc                   : Quit at current directory
 
 cdf() {
