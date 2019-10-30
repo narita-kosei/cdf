@@ -21,6 +21,8 @@ source ~/.zshrc
 # Usage
 Use arrow key to change directory
 
+![Demostration](https://raw.githubusercontent.com/narita-kosei/cdf/blob/images/cdf.gifcdf.gif)
+
 |Key|Action|
 |-|-|
 |Left (ctrl-h)|Move to parent directory|
