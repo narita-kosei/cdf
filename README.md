@@ -1,6 +1,8 @@
 # cdf
 Change directory like finder
 
+![Demostration](https://raw.githubusercontent.com/narita-kosei/cdf/images/cdf.gif)
+
 # Installation
 This command is compatible with only bash and zsh.
 
@@ -19,9 +21,18 @@ source ~/.zshrc
 ```
 
 # Usage
-Use arrow key to change directory
 
-![Demostration](https://raw.githubusercontent.com/narita-kosei/cdf/images/cdf.gif)
+```
+cdf [-a] [-h] [path]
+```
+
+### Options
+
+- `-a`: Display all directories including hidden directory.
+- `-h`: Show help.
+- `path`: Start with given path. If omitted, current path is used.
+
+Use arrow key to change directory
 
 |Key|Action|
 |-|-|
