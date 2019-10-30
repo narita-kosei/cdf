@@ -21,7 +21,7 @@ source ~/.zshrc
 # Usage
 Use arrow key to change directory
 
-![Demostration](https://raw.githubusercontent.com/narita-kosei/cdf/blob/images/cdf.gif)
+![Demostration](https://raw.githubusercontent.com/narita-kosei/cdf/images/cdf.gif)
 
 |Key|Action|
 |-|-|
