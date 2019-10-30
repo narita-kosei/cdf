@@ -2,11 +2,13 @@
 # cdf - Change Directory like Finder
 # Use arrow key to change directory
 # 
-# Left  (ctrl-h)       : Change to parent directory
-# Right (ctrl-l, space): Change to directory at cursor position
-# Up    (ctrl-k)       : Move cursor to up
-# Down  (ctrl-j, tab)  : Move cursor to down
-# Enter (Esc)          : Abort
+# Left  (ctrl-h)        : Change to parent directory
+# Right (ctrl-l, space) : Change to directory at cursor position
+# Up    (ctrl-k)        : Move cursor to up
+# Down  (ctrl-j, tab)   : Move cursor to down
+#
+# Enter                 : Quit after change to directory at cursor position
+# Esc                   : Quit at current directory
 
 cdf() {
     local FLG_A path_opt
@@ -51,11 +53,6 @@ cdf() {
         key=`echo "$out" | head -1`
         dir=`echo "$out" | tail -1 | sed -e 's/\/*$//g'`
         
-        # Enter to quit
-        if [[ "$key" == 'enter' ]]; then
-            break
-        fi
-        
         # Change $full_path to the parent directory
         if [[ "$key" == 'left' ]] || [[ "$key" == 'ctrl-h' ]]; then
             full_path=`echo "$full_path" | sed -e 's/\/[^\/]*$//g'`
@@ -72,6 +69,11 @@ cdf() {
         
         # Change directory
         cd "$full_path"
+
+        # Enter to quit
+        if [[ "$key" == 'enter' ]]; then
+            break
+        fi
 
         # use '' if $full_path is '/'
         if [[ "$full_path" == '/' ]]; then
