@@ -45,7 +45,7 @@ cdf() {
         return
     fi
 
-    local full_path
+    local full_path full_path_tmp
     full_path=`pwd | sed -e 's/^\/$//g'`
 
     while out=$(find . -maxdepth 1 -path "$path_opt" -prune -o -type d -print 2> /dev/null | LC_ALL=C sort -f | sed -e 's/^\.\///g' -e 's/\/*$/\//g' | fzf +m --expect=left,ctrl-h,right,ctrl-l,enter,space --bind=tab:down --cycle --border --ansi --preview "ls -F {}" --preview-window=right:50% --layout=reverse --prompt="$full_path/" --no-clear)
@@ -63,8 +63,9 @@ cdf() {
             fi
         # Change $full_path to the selected directory
         else
-            if [[ "$dir" != '.' ]]; then
-                full_path="$full_path/`echo $dir`"
+            full_path_tmp="$full_path/`echo $dir`"
+            if [[ "$dir" != '.' ]] && [[ -r "$full_path_tmp" ]]; then
+                full_path=$full_path_tmp
             fi
         fi
         
