@@ -32,8 +32,6 @@ cdf [-a] [-h] [path]
 - `-h`: Show help.
 - `path`: Start with given path. If omitted, current path is used.
 
-Use arrow key to change directory
-
 |Key|Action|
 |-|-|
 |Left (ctrl-h)|Move to parent directory|
